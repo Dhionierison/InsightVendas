@@ -193,7 +193,8 @@ export function Sidebar() {
               </nav>
             </SheetContent>
           </Sheet>
-          <h2>Menu</h2>
+          <h2 className="text-center flex items-center gap-2 px-4 py-2 text-2xl md:text-3xl font-semibold text-black hover:text-gray-800 transition-colors
+">InsightVendas</h2>
         </header>
       </div>
     </div>
