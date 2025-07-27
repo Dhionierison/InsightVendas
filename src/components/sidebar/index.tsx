@@ -107,7 +107,7 @@ export function Sidebar() {
                   href="#"
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  <LogOut className="h-5 w-5 text-red"/>
+                  <LogOut className="h-5 w-5 text-red" />
                   <span className="sr-only">Sair</span>
                 </Link>
               </TooltipTrigger>
@@ -193,8 +193,12 @@ export function Sidebar() {
               </nav>
             </SheetContent>
           </Sheet>
-          <h2 className="text-center flex items-center gap-2 px-4 py-2 text-2xl md:text-3xl font-semibold text-black hover:text-gray-800 transition-colors
-">Insight Vendas</h2>
+          <h2
+            className="text-center flex items-center gap-2 px-4 py-2 text-2xl md:text-3xl font-semibold text-black hover:text-gray-800 transition-colors
+"
+          >
+            Insight Vendas
+          </h2>
         </header>
       </div>
     </div>
