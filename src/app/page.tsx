@@ -10,11 +10,18 @@ import {
 import { BadgeDollarSignIcon, DollarSignIcon, PackageCheckIcon, PackageOpen, Users } from "lucide-react";
 import ChartOverview from "../components/chart";
 import {Sales} from "../components/sales";
+import Head from "next/head";
 
 
 
 export default function Home() {
   return (
+    <>
+    <Head>
+        <title>Insight Vendas</title>
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
+
     <main className="sm:ml-14 p-4">
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <Card>
@@ -85,7 +92,7 @@ export default function Home() {
         <ChartOverview></ChartOverview>
         <Sales></Sales>
       </section>
-
     </main>
+    </>
   );
 }
