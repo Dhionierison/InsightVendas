@@ -9,6 +9,7 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
+  TooltipProps
 } from "recharts";
 import { DollarSign } from "lucide-react";
 import { ChartContainer, ChartConfig } from "../ui/chart";
