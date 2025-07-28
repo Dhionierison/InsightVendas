@@ -18,6 +18,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "../ui/tooltip";
+import Image from "next/image";
 
 export function Sidebar() {
   return (
@@ -204,9 +205,16 @@ export function Sidebar() {
             </SheetContent>
           </Sheet>
           <h2
-            className="text-center flex items-center gap-2 px-4 py-2 text-2xl md:text-3xl font-semibold text-black hover:text-gray-800 transition-colors
-"
+            className="text-center flex items-center gap-2 px-4 py-2 text-2xl md:text-3xl font-semibold 
+            text-black hover:text-gray-800 transition-colors"
           >
+            <Image
+              src="/favicon.ico"
+              alt="Logo Insight Vendas"
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
             Insight Vendas
           </h2>
         </header>
