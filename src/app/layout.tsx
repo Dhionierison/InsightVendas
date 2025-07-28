@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 
 import { Sidebar } from "../components/sidebar";
+import Footer from "@/components/footer";
 
 
 const geistSans = Geist({
@@ -29,10 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("min-h-screen bg-background font-sans antialiased", geistSans.variable)}>
+      <body className={cn("min-h-screen flex flex-col bg-background font-sans antialiased",
+          geistSans.variable)}>
         <Sidebar />
-        {children}
-      </body>
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>   
     </html>
   );
 }

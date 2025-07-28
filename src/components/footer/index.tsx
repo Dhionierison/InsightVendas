@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-white/90 backdrop-blur border-t border-gray-200">
-      <div className="container mx-auto px-4 py-10 sm:px-5 lg:px-8 min-1 flex-gr">
+    <footer className="sm:ml-14 rounded-t-2xl bg-white/90 backdrop-blur border-t border-gray-200 shadow-sm">
+      <div className="max-w-4xl mx-auto px-4 py-4 sm:px-5 lg:px-">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm text-gray-600 text-center md:text-left">
             <span className="sr-only">Copyright</span>©{" "}
@@ -33,7 +33,7 @@ export default function Footer() {
               Política de Privacidade
             </a>
             <a
-              href="https://api.whatsapp.com/send/?phone=5569992789320&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5569992789320"
               className="text-gray-600 hover:text-black transition-colors"
               aria-label="Entre em contato"
             >

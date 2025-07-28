@@ -98,7 +98,6 @@ export default function Home() {
           <Sales></Sales>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
