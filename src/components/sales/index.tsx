@@ -31,7 +31,7 @@ export function Sales() {
           <div>
             <p>Dhionierison</p>
             <p className="text-xs">
-              Vendas: R$ 100.000,00
+              Vendas: R$ 125.193,51
             </p>
           </div>
         </article>
@@ -45,7 +45,7 @@ export function Sales() {
           <div>
             <p>Paulo Ricardo</p>
             <p className="text-xs">
-              Vendas: R$ 100.000,00
+              Vendas: R$ 145.345,51
             </p>
           </div>
         </article>
@@ -56,7 +56,7 @@ export function Sales() {
           <div>
             <p>Yam Claro</p>
             <p className="text-xs">
-              Vendas: R$ 100.000,00
+              Vendas: R$ 185.456,18
             </p>
           </div>
         </article>
@@ -70,7 +70,7 @@ export function Sales() {
           <div>
             <p>Fabricio Santos</p>
             <p className="text-xs">
-              Vendas: R$ 100.000,00
+              Vendas: R$ 145.456,16
             </p>
           </div>
         </article>
@@ -84,7 +84,7 @@ export function Sales() {
           <div>
             <p>Thiago Araujo</p>
             <p className="text-xs">
-              Vendas: R$ 100.000,00
+              Vendas: R$ 123.145,45
             </p>
           </div>
         </article>
