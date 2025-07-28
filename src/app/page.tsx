@@ -17,6 +17,7 @@ import {
 import ChartOverview from "../components/chart";
 import { Sales } from "../components/sales";
 import Head from "next/head";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -93,10 +94,11 @@ export default function Home() {
           </Card>
         </section>
         <section className="mt-4 flex flex-col md:flex-row gap-4">
-          <ChartOverview></ChartOverview>
+          <ChartOverview />
           <Sales></Sales>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
