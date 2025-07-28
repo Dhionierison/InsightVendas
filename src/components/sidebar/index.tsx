@@ -190,6 +190,16 @@ export function Sidebar() {
                   <Settings className="h-5 w-5 transition-all duration-300 ease-in-out" />
                   Configurações
                 </Link>
+
+                <Link
+                  href="#"
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground 
+                                 hover:text-foreground"
+                  prefetch={false}
+                >
+                  <LogOut className="h-5 w-5 transition-all duration-300 ease-in-out" />
+                  Sair
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
