@@ -1,3 +1,5 @@
+"use client";
+
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -25,8 +27,12 @@ import {
   TooltipContent,
 } from "../ui/tooltip";
 import Image from "next/image";
+import { useState } from "react";
+
+
 
 export function Sidebar() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="flex w-full flex-col bg-muted/40">
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 border-r bg-background sm:flex flex-col">
@@ -117,7 +123,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/"
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                 >
                   <LogOut className="h-5 w-5 text-red" />
@@ -135,7 +141,7 @@ export function Sidebar() {
           className="sticky top-0 z-30 flex h-14 items-center px-4 border-b bg-background gap-4 
             sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6"
         >
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
                 <PanelBottom className="w-5 h-5" />
@@ -145,7 +151,8 @@ export function Sidebar() {
             <SheetContent side="left" className="sm:max-w-x">
               <nav className="grid gap-6 text-lg font-medium">
                 <Link
-                  href="#"
+                  href="/"
+                  onClick={() => setOpen(false)}
                   className="h-10 w-10 bg-primary rounded-full text-lg flex items-center 
                                 justify-center text-primary-foreground md:text-base gap-2"
                   prefetch={false}
@@ -155,7 +162,8 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/"
+                  onClick={() => setOpen(false)}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground 
                                  hover:text-foreground"
                   prefetch={false}
@@ -165,17 +173,19 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/vendas"
+                  onClick={() => setOpen(false)}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground 
                                  hover:text-foreground"
                   prefetch={false}
                 >
-                  <ShoppingBag className="h-5 w-5 transition-all duration-300 ease-in-out" />
-                  Pedidos
+                  <HandshakeIcon className="h-5 w-5 transition-all duration-300 ease-in-out" />
+                  Vendas
                 </Link>
 
                 <Link
                   href="#"
+                  onClick={() => setOpen(false)}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground 
                                  hover:text-foreground"
                   prefetch={false}
@@ -186,6 +196,7 @@ export function Sidebar() {
 
                 <Link
                   href="/clientes"
+                  onClick={() => setOpen(false)}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground 
                                  hover:text-foreground"
                   prefetch={false}
@@ -196,6 +207,7 @@ export function Sidebar() {
 
                 <Link
                   href="#"
+                  onClick={() => setOpen(false)}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground 
                                  hover:text-foreground"
                   prefetch={false}
@@ -205,7 +217,8 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/"
+                  onClick={() => setOpen(false)}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground 
                                  hover:text-foreground"
                   prefetch={false}
