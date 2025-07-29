@@ -29,8 +29,6 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 
-
-
 export function Sidebar() {
   const [open, setOpen] = useState(false);
   return (
@@ -38,10 +36,7 @@ export function Sidebar() {
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 border-r bg-background sm:flex flex-col">
         <nav className="flex flex-col items-center gap-4 px-2 py-5">
           <TooltipProvider>
-            <Link
-              href="/"
-              className="flex h-9 w-9 items-center justify-center"
-            >
+            <Link href="/" className="flex h-9 w-9 items-center justify-center">
               <Image
                 src="/favicon.ico"
                 alt="Dashboard Avatar"
@@ -153,11 +148,16 @@ export function Sidebar() {
                 <Link
                   href="/"
                   onClick={() => setOpen(false)}
-                  className="h-10 w-10 bg-primary rounded-full text-lg flex items-center 
-                                justify-center text-primary-foreground md:text-base gap-2"
                   prefetch={false}
+                  className="flex h-9 w-9 items-center justify-center"
                 >
-                  <Package className="h-5 w-5 transition-all duration-300 ease-in-out" />
+                  <Image
+                    src="/favicon.ico"
+                    alt="Dashboard Avatar"
+                    width={36}
+                    height={36}
+                    className="rounded-full"
+                  />
                   <span className="sr-only">Logo do Projeto</span>
                 </Link>
 
