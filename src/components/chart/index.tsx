@@ -87,7 +87,7 @@ export default function ChartOverview() {
       </Card>
 
       {/* Card de Pedidos */}
-      <Card className="w-full">
+      <Card className="w-full bg-card text-card-foreground shadow-md border border-border rounded-xl transition hover:shadow-lg">
         <CardHeader>
           <div className="flex items-center justify-between">
             <CardTitle className="text-lg sm:text-xl text-blue-800">
