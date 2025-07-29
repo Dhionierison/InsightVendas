@@ -39,7 +39,7 @@ export function Sidebar() {
         <nav className="flex flex-col items-center gap-4 px-2 py-5">
           <TooltipProvider>
             <Link
-              href="/favicon.ico"
+              href="/"
               className="flex h-9 w-9 items-center justify-center"
             >
               <Image
@@ -80,7 +80,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/produtos"
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                 >
                   <Package className="h-5 w-4=5" />
@@ -184,7 +184,7 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/produtos"
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground 
                                  hover:text-foreground"
