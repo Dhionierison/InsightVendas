@@ -2,12 +2,18 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
+  BugPlayIcon,
+  Handshake,
+  HandshakeIcon,
   Home,
   HomeIcon,
   LogOut,
+  LucideHandshake,
   PanelBottom,
   Settings,
+  ShellIcon,
   ShoppingBag,
+  SparklesIcon,
   User,
   Users,
 } from "lucide-react";
@@ -55,14 +61,14 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/vendas"
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  <ShoppingBag className="h-5 w-4=5" />
-                  <span className="sr-only">Pedidos</span>
+                  <HandshakeIcon className="h-5 w-4=5" />
+                  <span className="sr-only">Vendas</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Pedidos</TooltipContent>
+              <TooltipContent side="right">Vendas</TooltipContent>
             </Tooltip>
 
             <Tooltip>
