@@ -29,67 +29,77 @@ export default function Home() {
 
       <main className="sm:ml-14 p-4">
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <Card>
+          <Card className="bg-rose-50 border border-rose-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
             <CardHeader>
-              <div className="flex items items-center justify-center">
-                <CardTitle className="text-lg sm:text-xl text-gray-800 select-none">
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-lg sm:text-xl font-semibold text-rose-900 select-none">
                   Total de Vendas
                 </CardTitle>
-                <DollarSignIcon className="ml-auto w-4 h-4" />
+                <DollarSignIcon className="w-5 h-5 text-rose-600" />
               </div>
-              <CardDescription>Total de Vendas em 90 dias</CardDescription>
+              <CardDescription className="text-sm text-rose-700 mt-1">
+                Total de Vendas em 90 dias
+              </CardDescription>
             </CardHeader>
-
             <CardContent>
-              <p className="text-base sm:text-lg font-bold">R$ 40.000,00</p>
+              <p className="text-xl sm:text-2xl font-bold text-rose-800">
+                R$ 40.000,00
+              </p>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="bg-emerald-50 border border-emerald-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
             <CardHeader>
-              <div className="flex items items-center justify-center">
-                <CardTitle className="text-lg sm:text-xl text-gray-800 select-none">
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-lg sm:text-xl font-semibold text-emerald-900 select-none">
                   Novos Clientes
                 </CardTitle>
-                <Users className="ml-auto w-4 h-4" />
+                <Users className="w-5 h-5 text-emerald-600" />
               </div>
-              <CardDescription>Novos clientes em 30 dias</CardDescription>
+              <CardDescription className="text-sm text-emerald-700 mt-1">
+                Novos clientes em 30 dias
+              </CardDescription>
             </CardHeader>
-
             <CardContent>
-              <p className="text-base sm:text-lg font-bold">234</p>
+              <p className="text-xl sm:text-2xl font-bold text-emerald-800">
+                234
+              </p>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="bg-cyan-50 border border-cyan-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
             <CardHeader>
-              <div className="flex items items-center justify-center">
-                <CardTitle className="text-lg sm:text-xl text-gray-800 select-none">
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-lg sm:text-xl font-semibold text-cyan-900 select-none">
                   Pedidos Hoje
                 </CardTitle>
-                <PackageCheckIcon className="ml-auto w-4 h-4" />
+                <PackageCheckIcon className="w-5 h-5 text-cyan-600" />
               </div>
-              <CardDescription>Total de Pedidos Hoje</CardDescription>
+              <CardDescription className="text-sm text-cyan-700 mt-1">
+                Total de Pedidos Hoje
+              </CardDescription>
             </CardHeader>
-
             <CardContent>
-              <p className="text-base sm:text-lg font-bold">31</p>
+              <p className="text-xl sm:text-2xl font-bold text-cyan-800">31</p>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="bg-indigo-50 border border-indigo-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
             <CardHeader>
-              <div className="flex items items-center justify-center">
-                <CardTitle className="text-lg sm:text-xl text-gray-800 select-none">
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-lg sm:text-xl font-semibold text-indigo-900 select-none">
                   Total Pedidos
                 </CardTitle>
-                <PackageOpen className="ml-auto w-4 h-4" />
+                <PackageOpen className="w-5 h-5 text-indigo-600" />
               </div>
-              <CardDescription>Total de Pedidos em 30 dias</CardDescription>
+              <CardDescription className="text-sm text-indigo-700 mt-1">
+                Total de Pedidos em 30 dias
+              </CardDescription>
             </CardHeader>
-
             <CardContent>
-              <p className="text-base sm:text-lg font-bold">123</p>
+              <p className="text-xl sm:text-2xl font-bold text-indigo-800">
+                123
+              </p>
             </CardContent>
           </Card>
         </section>
@@ -97,7 +107,7 @@ export default function Home() {
           <ChartOverview />
         </section>
         <section className="mt-4 flex flex-col md:flex-row gap-4">
-          <Sales/>
+          <Sales />
         </section>
       </main>
     </>
