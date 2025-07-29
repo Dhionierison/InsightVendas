@@ -27,10 +27,16 @@ export function Sidebar() {
         <nav className="flex flex-col items-center gap-4 px-2 py-5">
           <TooltipProvider>
             <Link
-              href="#"
-              className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary text-primary-foreground rounded-full"
+              href="/favicon.ico"
+              className="flex h-9 w-9 items-center justify-center"
             >
-              <Package className="h-4 w-4" />
+              <Image
+                src="/favicon.ico"
+                alt="Dashboard Avatar"
+                width={36}
+                height={36}
+                className="rounded-full"
+              />
               <span className="sr-only">Dashboard Avatar</span>
             </Link>
             <Tooltip>
