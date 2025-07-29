@@ -36,7 +36,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="#/"
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                 >
                   <HomeIcon className="h-5 w-4=5" />
@@ -75,7 +75,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/clientes"
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                 >
                   <User className="h-5 w-4=5" />
@@ -173,7 +173,7 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#"
+                  href="/clientes"
                   className="flex items-center gap-4 px-2.5 text-muted-foreground 
                                  hover:text-foreground"
                   prefetch={false}
