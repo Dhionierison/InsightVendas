@@ -15,6 +15,7 @@ import {
   Settings,
   ShellIcon,
   ShoppingBag,
+  SlidersHorizontalIcon,
   SparklesIcon,
   User,
   Users,
@@ -139,7 +140,7 @@ export function Sidebar() {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
-                <PanelBottom className="w-5 h-5" />
+                <SlidersHorizontalIcon className="w-5 h-5" />
                 <span className="sr-only">Abrir / Fechar Menu</span>
               </Button>
             </SheetTrigger>
