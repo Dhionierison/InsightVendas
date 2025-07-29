@@ -54,15 +54,15 @@ export default function ChartOverview() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
       {/* Card de Vendas */}
-      <Card className="w-full">
+      <Card className="w-full bg-card text-card-foreground shadow-md border border-border rounded-xl transition hover:shadow-lg">
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle className="text-lg sm:text-xl text-gray-800">
+            <CardTitle className="text-lg sm:text-xl text-green-800">
               Overview Vendas
             </CardTitle>
             <DollarSign className="w-4 h-4" />
           </div>
-          <CardDescription>Evolução das Vendas</CardDescription>
+          <CardDescription className="text-green-800">Evolução das Vendas</CardDescription>
         </CardHeader>
         <CardContent className="h-[300px]">
           <ChartContainer config={chartConfigVendas}>
@@ -90,12 +90,12 @@ export default function ChartOverview() {
       <Card className="w-full">
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle className="text-lg sm:text-xl text-gray-800">
+            <CardTitle className="text-lg sm:text-xl text-blue-800">
               Pedidos no Mês
             </CardTitle>
             <ClipboardList className="w-4 h-4" />
           </div>
-          <CardDescription>Pedidos por Dia (Julho)</CardDescription>
+          <CardDescription className="text-blue-800">Pedidos por Dia (Julho)</CardDescription>
         </CardHeader>
         <CardContent className="h-[300px]">
           <ChartContainer config={chartConfigPedidos}>
