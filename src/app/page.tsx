@@ -95,7 +95,9 @@ export default function Home() {
         </section>
         <section className="mt-4 flex flex-col md:flex-row gap-4">
           <ChartOverview />
-          <Sales></Sales>
+        </section>
+        <section className="mt-4 flex flex-col md:flex-row gap-4">
+          <Sales/>
         </section>
       </main>
     </>
