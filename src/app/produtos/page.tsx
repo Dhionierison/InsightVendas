@@ -1,45 +1,41 @@
 'use client';
 
-import { ShoppingBagIcon, Package } from "lucide-react";
+import { Package } from "lucide-react";
 import { useEffect, useState } from "react";
+import { produtosService } from "@/services/produtos-service"; // ajuste o caminho conforme sua estrutura
 
 type Produto = {
   id: number;
   nome: string;
+  descricao?: string;
   preco: number;
-  estoque: number;
+  estoque?: number;
 };
-
-const mockProdutos: Produto[] = [
-  {
-    id: 1,
-    nome: "Camiseta Branca",
-    preco: 59.9,
-    estoque: 120,
-  },
-  {
-    id: 2,
-    nome: "Calça Jeans",
-    preco: 149.5,
-    estoque: 80,
-  },
-  {
-    id: 3,
-    nome: "Tênis Esportivo",
-    preco: 299.99,
-    estoque: 45,
-  },
-];
 
 export default function Produtos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setProdutos(mockProdutos);
-    }, 500);
+    async function carregarProdutos() {
+      try {
+        const data = await produtosService.listarProdutos();
+        const produtosFormatados: Produto[] = data.map((item: any) => ({
+          id: item.id,
+          nome: item.nome,
+          descricao: item.descricao,
+          preco: parseFloat(item.preco),
+          
+        }));
+        setProdutos(produtosFormatados);
+      } catch (error) {
+        console.error("Erro ao buscar produtos:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-    return () => clearTimeout(timer);
+    carregarProdutos();
   }, []);
 
   return (
@@ -56,21 +52,22 @@ export default function Produtos() {
               <th className="px-6 py-3 font-semibold">ID</th>
               <th className="px-6 py-3 font-semibold">Nome</th>
               <th className="px-6 py-3 font-semibold">Preço</th>
-              <th className="px-6 py-3 font-semibold">Estoque</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
             {produtos.map((produto) => (
               <tr key={produto.id} className="hover:bg-gray-50">
                 <td className="px-6 py-4">{produto.id}</td>
-                <td className="px-6 py-4 font-medium text-gray-900">{produto.nome}</td>
+                <td className="px-6 py-4 font-medium text-gray-900">
+                  {produto.nome}
+                </td>
                 <td className="px-6 py-4 text-gray-600">
                   R$ {produto.preco.toFixed(2).replace(".", ",")}
                 </td>
-                <td className="px-6 py-4 text-gray-600">{produto.estoque}</td>
+                
               </tr>
             ))}
-            {produtos.length === 0 && (
+            {produtos.length === 0 && !loading && (
               <tr>
                 <td colSpan={4} className="text-center py-6 text-gray-500">
                   Nenhum produto encontrado.

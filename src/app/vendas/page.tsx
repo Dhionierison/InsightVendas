@@ -2,51 +2,41 @@
 
 import { HandshakeIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import { VendasService } from "@/services/vendas-service";
 
-type Venda = {
+type VendaItem = {
   id: number;
-  cliente_nome: string;
-  data: string;
-  valor_total: number;
+  venda_id: number;
+  produto_id: number;
+  quantidade: number;
+  preco_unitario: string;
 };
 
-const mockVendas: Venda[] = [
-  {
-    id: 1,
-    cliente_nome: "João Silva",
-    data: "2025-07-25T14:00:00Z",
-    valor_total: 250.0,
-  },
-  {
-    id: 2,
-    cliente_nome: "Maria Oliveira",
-    data: "2025-07-26T10:30:00Z",
-    valor_total: 145.5,
-  },
-  {
-    id: 3,
-    cliente_nome: "Carlos Lima",
-    data: "2025-07-28T16:45:00Z",
-    valor_total: 320.75,
-  },
-];
-
 export default function Vendas() {
-  const [vendas, setVendas] = useState<Venda[]>([]);
+  const [itens, setItens] = useState<VendaItem[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setVendas(mockVendas);
-    }, 500);
+    async function carregar() {
+      try {
+        const service = new VendasService();
+        const data = await service.listarTodosItens();
+        setItens(data);
+      } catch (error) {
+        console.error("Erro ao carregar itens de venda:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-    return () => clearTimeout(timer);
+    carregar();
   }, []);
 
   return (
     <main className="sm:ml-14 p-6">
       <div className="flex items-center gap-2 mb-6">
         <HandshakeIcon className="w-6 h-6 text-primary" />
-        <h1 className="text-2xl font-semibold text-gray-800">Vendas</h1>
+        <h1 className="text-2xl font-semibold text-gray-800">Itens de Venda</h1>
       </div>
 
       <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm bg-white">
@@ -54,30 +44,37 @@ export default function Vendas() {
           <thead className="bg-gray-50 text-gray-700 text-left">
             <tr>
               <th className="px-6 py-3 font-semibold">ID</th>
-              <th className="px-6 py-3 font-semibold">Cliente</th>
-              <th className="px-6 py-3 font-semibold">Data</th>
-              <th className="px-6 py-3 font-semibold">Valor Total</th>
+              <th className="px-6 py-3 font-semibold">Venda ID</th>
+              <th className="px-6 py-3 font-semibold">Produto ID</th>
+              <th className="px-6 py-3 font-semibold">Quantidade</th>
+              <th className="px-6 py-3 font-semibold">Preço Unitário</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {vendas.map((venda) => (
-              <tr key={venda.id} className="hover:bg-gray-50">
-                <td className="px-6 py-4">{venda.id}</td>
-                <td className="px-6 py-4 font-medium text-gray-900">{venda.cliente_nome}</td>
-                <td className="px-6 py-4 text-gray-600">
-                  {new Date(venda.data).toLocaleDateString("pt-BR")}
-                </td>
-                <td className="px-6 py-4 text-gray-600">
-                  R$ {venda.valor_total.toFixed(2).replace(".", ",")}
-                </td>
-              </tr>
-            ))}
-            {vendas.length === 0 && (
+            {loading ? (
               <tr>
-                <td colSpan={4} className="text-center py-6 text-gray-500">
-                  Nenhuma venda encontrada.
+                <td colSpan={5} className="text-center py-6 text-gray-500">
+                  Carregando...
                 </td>
               </tr>
+            ) : itens.length === 0 ? (
+              <tr>
+                <td colSpan={5} className="text-center py-6 text-gray-500">
+                  Nenhum item encontrado.
+                </td>
+              </tr>
+            ) : (
+              itens.map((item) => (
+                <tr key={item.id} className="hover:bg-gray-50">
+                  <td className="px-6 py-4">{item.id}</td>
+                  <td className="px-6 py-4">{item.venda_id}</td>
+                  <td className="px-6 py-4">{item.produto_id}</td>
+                  <td className="px-6 py-4">{item.quantidade}</td>
+                  <td className="px-6 py-4 text-gray-600">
+                    R$ {parseFloat(item.preco_unitario).toFixed(2).replace(".", ",")}
+                  </td>
+                </tr>
+              ))
             )}
           </tbody>
         </table>
