@@ -47,8 +47,8 @@
   --radius: 0.625rem;
 
   /* Fundo geral azul bem clarinho */
-  --background: oklch(0.97 0.025 250); /* azul gelo */
-  --foreground: oklch(0.24 0.015 260); /* azul escuro acinzentado */
+  --background: oklch(95.475% 0.00611 138.516); /* azul gelo */
+  --foreground: oklch(70.046% 0.17767 52.33); /* azul escuro acinzentado */
 
   /* Cards mais suaves e com contraste */
   --card: oklch(0.99 0.012 250); /* quase branco azulado */
