@@ -1,10 +1,8 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import { Users } from "lucide-react";
 import { ClienteService } from "@/services/clientes-service";
-
-
 
 const clienteService = new ClienteService();
 
@@ -22,7 +20,12 @@ export default function Clientes() {
     const fetchClientes = async () => {
       try {
         const response = await clienteService.listarClientes();
-        setClientes(response.data);
+        const lista = response.data?.data || response.data;
+        if (Array.isArray(lista)) {
+          setClientes(lista);
+        } else {
+          console.error("A resposta da API não é um array:", lista);
+        }
       } catch (error) {
         console.error("Erro ao buscar clientes:", error);
       }
@@ -52,7 +55,9 @@ export default function Clientes() {
             {clientes.map((cliente) => (
               <tr key={cliente.id} className="hover:bg-gray-50">
                 <td className="px-6 py-4">{cliente.id}</td>
-                <td className="px-6 py-4 font-medium text-gray-900">{cliente.nome}</td>
+                <td className="px-6 py-4 font-medium text-gray-900">
+                  {cliente.nome}
+                </td>
                 <td className="px-6 py-4 text-gray-600">{cliente.email}</td>
                 <td className="px-6 py-4 text-gray-600">{cliente.telefone}</td>
               </tr>
