@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Package } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -12,6 +12,13 @@ type Produto = {
   estoque?: number;
 };
 
+interface ProdutoAPI {
+  id: number;
+  nome: string;
+  descricao: string;
+  preco: string | number;
+}
+
 export default function Produtos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [loading, setLoading] = useState(true);
@@ -20,12 +27,11 @@ export default function Produtos() {
     async function carregarProdutos() {
       try {
         const data = await produtosService.listarProdutos();
-        const produtosFormatados: Produto[] = data.map((item: any) => ({
+        const produtosFormatados: Produto[] = data.map((item: ProdutoAPI) => ({
           id: item.id,
           nome: item.nome,
           descricao: item.descricao,
-          preco: parseFloat(item.preco),
-          
+          preco: parseFloat(item.preco.toString()),
         }));
         setProdutos(produtosFormatados);
       } catch (error) {
@@ -64,7 +70,6 @@ export default function Produtos() {
                 <td className="px-6 py-4 text-gray-600">
                   R$ {produto.preco.toFixed(2).replace(".", ",")}
                 </td>
-                
               </tr>
             ))}
             {produtos.length === 0 && !loading && (
