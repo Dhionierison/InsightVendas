@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { HandshakeIcon } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -71,7 +71,10 @@ export default function Vendas() {
                   <td className="px-6 py-4">{item.produto_id}</td>
                   <td className="px-6 py-4">{item.quantidade}</td>
                   <td className="px-6 py-4 text-gray-600">
-                    R$ {parseFloat(item.preco_unitario).toFixed(2).replace(".", ",")}
+                    R${" "}
+                    {parseFloat(item.preco_unitario)
+                      .toFixed(2)
+                      .replace(".", ",")}
                   </td>
                 </tr>
               ))
