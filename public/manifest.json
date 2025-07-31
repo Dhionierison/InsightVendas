@@ -1,6 +1,6 @@
 {
   "name": "Insight Vendas",
-  "short_name": "Vendas",
+  "short_name": "Insight Vendas",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
