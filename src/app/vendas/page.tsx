@@ -35,8 +35,8 @@ export default function Vendas() {
   return (
     <main className="sm:ml-14 p-6">
       <div className="flex items-center gap-2 mb-6">
-        <HandshakeIcon className="w-6 h-6 text-primary" />
-        <h1 className="text-2xl font-semibold text-gray-800">Itens de Venda</h1>
+        <HandshakeIcon className="w-6 h-6  text-orange-400" />
+        <h1 className="text-2xl font-semibold text-orange-400">Itens de Venda</h1>
       </div>
 
       <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm bg-white">

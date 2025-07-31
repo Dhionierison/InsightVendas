@@ -37,8 +37,8 @@ export default function Configuracoes() {
   return (
     <main className="sm:ml-14 p-6">
       <div className="flex items-center gap-2 mb-6">
-        <SettingsIcon className="w-6 h-6 text-primary" />
-        <h1 className="text-2xl font-semibold text-gray-800">Configurações</h1>
+        <SettingsIcon className="w-6 h-6 text-orange-400" />
+        <h1 className="text-2xl font-semibold text-orange-400">Configurações</h1>
       </div>
 
       {mensagem && (

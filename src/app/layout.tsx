@@ -43,7 +43,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen flex flex-col bg-background font-sans antialiased",
+          "min-h-screen flex flex-col bg-site font-sans antialiased",
           geistSans.variable
         )}
       >

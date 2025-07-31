@@ -47,8 +47,8 @@ export default function Produtos() {
   return (
     <main className="sm:ml-14 p-6">
       <div className="flex items-center gap-2 mb-6">
-        <Package className="w-6 h-6 text-primary" />
-        <h1 className="text-2xl font-semibold text-gray-800">Produtos</h1>
+        <Package className="w-6 h-6 text-orange-400" />
+        <h1 className="text-2xl font-semibold text-orange-400">Produtos</h1>
       </div>
 
       <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm bg-white">
