@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardContent,
 } from "../ui/card";
-import { CircleDollarSignIcon, DollarSign } from "lucide-react";
+import { CircleDollarSignIcon, DollarSign, User, Users } from "lucide-react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 
 export function Sales() {
@@ -16,7 +16,7 @@ export function Sales() {
           <CardTitle className="text-lg sm:text-xl text-blue-500">
             Últimos Clientes
           </CardTitle>
-          <CircleDollarSignIcon className="ml-auto w-4 h4" />
+          <Users className="ml-auto w-4 h4" />
         </div>
         <CardDescription className="text-xs sm:text-base text-black">Últimos clientes com mais vendas</CardDescription>
       </CardHeader>

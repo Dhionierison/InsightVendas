@@ -19,6 +19,8 @@ import {
   SparklesIcon,
   User,
   Users,
+  Users2,
+  Users2Icon,
 } from "lucide-react";
 import { Package } from "lucide-react";
 import {
@@ -92,7 +94,7 @@ export function Sidebar() {
                   href="/clientes"
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  <User className="h-5 w-4=5" />
+                  <Users2Icon className="h-5 w-4=5" />
                   <span className="sr-only">Clientes</span>
                 </Link>
               </TooltipTrigger>
@@ -202,7 +204,7 @@ export function Sidebar() {
                                  hover:text-foreground"
                   prefetch={false}
                 >
-                  <Users className="h-5 w-5 transition-all duration-300 ease-in-out" />
+                  <Users2 className="h-5 w-5 transition-all duration-300 ease-in-out" />
                   Clientes
                 </Link>
 
