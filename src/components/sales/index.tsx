@@ -18,7 +18,7 @@ export function Sales() {
           </CardTitle>
           <CircleDollarSignIcon className="ml-auto w-4 h4" />
         </div>
-        <CardDescription className="text-xs sm:text-base text-blue-500">Últimos clientes com mais vendas</CardDescription>
+        <CardDescription className="text-xs sm:text-base text-black">Últimos clientes com mais vendas</CardDescription>
       </CardHeader>
       <CardContent>
         <article className="flex items-center justify-left gap-4 border-b border-border/50 pb-4 py-4 text">

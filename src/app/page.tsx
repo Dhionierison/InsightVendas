@@ -29,26 +29,26 @@ export default function Home() {
 
       <main className="sm:ml-14 p-4">
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <Card className="bg-rose-50 border border-rose-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
+          <Card className="bg-rose-50 border border-yelow-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
             <CardHeader>
               <div className="flex items-center justify-between">
-                <CardTitle className="text-lg sm:text-xl font-semibold text-rose-900 select-none">
+                <CardTitle className="text-lg sm:text-xl font-semibold text-violet-800 select-none">
                   Total de Vendas
                 </CardTitle>
-                <DollarSignIcon className="w-5 h-5 text-rose-600" />
+                <DollarSignIcon className="w-5 h-5 text-violet-800" />
               </div>
-              <CardDescription className="text-sm text-rose-700 mt-1">
+              <CardDescription className="text-sm text-violet-700 mt-1">
                 Total de Vendas em 90 dias
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-xl sm:text-2xl font-bold text-rose-800">
+              <p className="text-xl sm:text-2xl font-bold text-violet-800">
                 R$ 40.000,00
               </p>
             </CardContent>
           </Card>
 
-          <Card className="bg-emerald-50 border border-emerald-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
+          <Card className="bg-emerald-50 border border-yelow-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="text-lg sm:text-xl font-semibold text-emerald-900 select-none">
@@ -67,7 +67,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-cyan-50 border border-cyan-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
+          <Card className="bg-cyan-50 border border-yelow-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="text-lg sm:text-xl font-semibold text-cyan-900 select-none">
@@ -84,20 +84,20 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-indigo-50 border border-indigo-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
+          <Card className="bg-indigo-50 border border-ielow-400 shadow-md rounded-2xl p-4 hover:shadow-lg transition-all duration-300">
             <CardHeader>
               <div className="flex items-center justify-between">
-                <CardTitle className="text-lg sm:text-xl font-semibold text-indigo-900 select-none">
+                <CardTitle className="text-lg sm:text-xl font-semibold text-blue-900 select-none">
                   Total Pedidos
                 </CardTitle>
-                <PackageOpen className="w-5 h-5 text-indigo-600" />
+                <PackageOpen className="w-5 h-5 text-blue-600" />
               </div>
-              <CardDescription className="text-sm text-indigo-700 mt-1">
+              <CardDescription className="text-sm text-blue-700 mt-1">
                 Total de Pedidos em 30 dias
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-xl sm:text-2xl font-bold text-indigo-800">
+              <p className="text-xl sm:text-2xl font-bold text-blue-800">
                 123
               </p>
             </CardContent>
