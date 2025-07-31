@@ -60,7 +60,7 @@ export default function ChartOverview() {
             <CardTitle className="text-lg sm:text-xl text-green-800">
               Overview Vendas
             </CardTitle>
-            <DollarSign className="w-4 h-4" />
+            <DollarSign className="text-green-800 w-4 h-4" />
           </div>
           <CardDescription className="text-green-800">Evolução das Vendas</CardDescription>
         </CardHeader>
@@ -93,7 +93,7 @@ export default function ChartOverview() {
             <CardTitle className="text-lg sm:text-xl text-blue-800">
               Pedidos no Mês
             </CardTitle>
-            <ClipboardList className="w-4 h-4" />
+            <ClipboardList className="text-blue-800 w-4 h-4" />
           </div>
           <CardDescription className="text-blue-800">Pedidos por Dia (Julho)</CardDescription>
         </CardHeader>
