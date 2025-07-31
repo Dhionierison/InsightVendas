@@ -10,15 +10,15 @@ import { Avatar, AvatarImage } from "../ui/avatar";
 
 export function Sales() {
   return (
-    <Card className="text-black w-full md:w-1/2 md:max-w-[600px] transition hover:shadow-lg">
+    <Card className="text-blue-400 w-full md:w-1/2 md:max-w-[600px] transition hover:shadow-lg">
       <CardHeader>
         <div className="flex items-center justify-center">
-          <CardTitle className="text-lg sm:text-xl text-black-500">
+          <CardTitle className="text-lg sm:text-xl text-blue-500">
             Últimos Clientes
           </CardTitle>
           <CircleDollarSignIcon className="ml-auto w-4 h4" />
         </div>
-        <CardDescription className="text-lg sm:text-xl text-black-500">Últimos clientes com mais vendas</CardDescription>
+        <CardDescription className="text-xs sm:text-base text-blue-500">Últimos clientes com mais vendas</CardDescription>
       </CardHeader>
       <CardContent>
         <article className="flex items-center justify-left gap-4 border-b border-border/50 pb-4 py-4 text">
@@ -29,8 +29,8 @@ export function Sales() {
             />
           </Avatar>
           <div>
-            <p>Dhionierison</p>
-            <p className="text-xs">
+            <p className="text-black">Dhionierison</p>
+            <p className="text-xs text-blue-500">
               Vendas: R$ 125.193,51
             </p>
           </div>
@@ -43,7 +43,7 @@ export function Sales() {
             />
           </Avatar>
           <div>
-            <p>Paulo Ricardo</p>
+            <p className="text-black">Paulo Ricardo</p>
             <p className="text-xs">
               Vendas: R$ 145.345,51
             </p>
@@ -54,7 +54,7 @@ export function Sales() {
             <AvatarImage src="https://github.com/yamclaro.png" alt="Dhioni" />
           </Avatar>
           <div>
-            <p>Yam Claro</p>
+            <p className="text-black">Yam Claro</p>
             <p className="text-xs">
               Vendas: R$ 185.456,18
             </p>
@@ -68,7 +68,7 @@ export function Sales() {
             />
           </Avatar>
           <div>
-            <p>Fabricio Santos</p>
+            <p className="text-black">Fabricio Santos</p>
             <p className="text-xs">
               Vendas: R$ 145.456,16
             </p>
@@ -82,7 +82,7 @@ export function Sales() {
             />
           </Avatar>
           <div>
-            <p>Thiago Araujo</p>
+            <p className="text-black">Thiago Araujo</p>
             <p className="text-xs">
               Vendas: R$ 123.145,45
             </p>
