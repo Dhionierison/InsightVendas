@@ -10,18 +10,18 @@ import { Avatar, AvatarImage } from "../ui/avatar";
 
 export function Sales() {
   return (
-    <Card className="w-full md:w-1/2 md:max-w-[600px]">
+    <Card className="text-black w-full md:w-1/2 md:max-w-[600px] transition hover:shadow-lg">
       <CardHeader>
         <div className="flex items-center justify-center">
-          <CardTitle className="text-lg sm:text-xl text-gray-800">
+          <CardTitle className="text-lg sm:text-xl text-black-500">
             Últimos Clientes
           </CardTitle>
           <CircleDollarSignIcon className="ml-auto w-4 h4" />
         </div>
-        <CardDescription>Últimos clientes com mais vendas</CardDescription>
+        <CardDescription className="text-lg sm:text-xl text-black-500">Últimos clientes com mais vendas</CardDescription>
       </CardHeader>
       <CardContent>
-        <article className="flex items-center justify-left gap-4 border-b border-border/50 pb-4 py-4">
+        <article className="flex items-center justify-left gap-4 border-b border-border/50 pb-4 py-4 text">
           <Avatar className="w-10 h-10 ">
             <AvatarImage
               src="https://github.com/Dhionierison.png"
